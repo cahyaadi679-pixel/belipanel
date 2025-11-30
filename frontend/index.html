@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Yop4n Hosting - Panel Otomatis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js"></script>
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <div id="splash">
+    <div class="splash-inner">
+      <div class="logo-circle">Y</div>
+      <h1>Selamat datang di Yop4n Hosting</h1>
+      <p>Menyiapkan panel server otomatis untukmu...</p>
+      <div class="loader"></div>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-logo">⚡</span>
+      <div>
+        <div class="brand-title">Yop4n Hosting</div>
+        <div class="brand-subtitle">Auto panel Pterodactyl + QRIS</div>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <a href="https://wa.me/6281239977516" target="_blank" rel="noopener noreferrer" class="owner-link">
+        Butuh bantuan? Chat owner
+      </a>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Deploy server kamu hanya beberapa detik.</h2>
+        <p>Pilih paket, scan QRIS, dan biarkan sistem membuatkan panel Pterodactyl otomatis tanpa ribet.</p>
+      </div>
+      <div class="hero-card">
+        <div class="hero-badge">Realtime QRIS • Auto create panel</div>
+        <div class="hero-stat-row">
+          <div class="hero-stat">
+            <div class="hero-stat-label">Aktif &amp; Aman</div>
+            <div class="hero-stat-value">Payment via Pakasir</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-label">Panel</div>
+            <div class="hero-stat-value">Pterodactyl</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="live-purchase-section">
+      <div id="live-purchase-feed" class="live-feed">
+        <!-- notifikasi pembelian akan di-inject oleh main.js -->
+      </div>
+    </section>
+
+    <section class="plans-section">
+      <h3 class="section-title">Pilih Paket Panel</h3>
+      <p class="section-subtitle">Mobile-first layout seperti DigitalOcean, dengan tombol beli hijau ala Tokopedia.</p>
+      <div id="plans-grid" class="plans-grid"></div>
+    </section>
+
+    <section id="payment-section" class="payment-section hidden">
+      <div class="card payment-card">
+        <h3>Step 2 · Scan &amp; Bayar</h3>
+        <p id="payment-description" class="muted"></p>
+        <div class="payment-layout">
+          <div class="payment-qr">
+            <div id="qris-container" class="qris-container"></div>
+          </div>
+          <div class="payment-info">
+            <div class="payment-status" id="payment-status-badge">Menunggu QRIS...</div>
+            <ul class="payment-meta" id="payment-meta"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="server-section" class="server-section hidden">
+      <div class="card server-card">
+        <h3>Step 3 · Panel Siap Dipakai</h3>
+        <p class="muted">Detail login panel akan muncul otomatis setelah pembayaran terkonfirmasi. Jika ada kendala, langsung hubungi owner lewat WhatsApp di atas.</p>
+        <div id="server-info" class="server-info"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Yop4n Hosting. Powered by Pakasir &amp; Pterodactyl.</span>
+  </footer>
+</body>
+</html>
